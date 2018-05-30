@@ -76,7 +76,7 @@ include silk_headers.mk
 include opus_headers.mk
 
 libopus_la_SOURCES = $(CELT_SOURCES) $(SILK_SOURCES) $(OPUS_SOURCES)
-libopus_la_LDFLAGS = -no-undefined -version-info @OPUS_LT_CURRENT@:@OPUS_LT_REVISION@:@OPUS_LT_AGE@
+libopus_la_LDFLAGS = -no-undefined -avoid-version
 libopus_la_LIBADD = $(NE10_LIBS) $(LIBM)
 if OPUS_ARM_EXTERNAL_ASM
 libopus_la_LIBADD += libarmasm.la
